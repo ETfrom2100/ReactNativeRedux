@@ -4,12 +4,13 @@ import Card from './Card';
 import CardSection from './CardSection';
 
 const AlbumDetail = ({ album }) => { //destructure props
-  const { title, artist, thumbnail_image } = album; // I want those properties from the album
+  const { title, artist, thumbnail_image, image } = album; // I want those properties from the album
   const {
     thumbnailStyle,
     headerContentStyle,
     thumbnailContainerStyle,
-    headerTextStyle } = styles; // destructure properties from styles
+    headerTextStyle,
+    imageStyle } = styles; // destructure properties from styles
   return (
     <Card>
       <CardSection>
@@ -21,7 +22,9 @@ const AlbumDetail = ({ album }) => { //destructure props
             <Text>{artist}</Text>
         </View>
       </CardSection>
-
+      <CardSection>
+         <Image source={{ uri: image }} style={imageStyle} />
+      </CardSection>
 
     </Card>
   );
@@ -44,6 +47,11 @@ const styles = {
     alignItems: 'center',
     marginLeft: 10,
     marginRight: 10
+  },
+  imageStyle: {
+    height: 300,
+    flex: 1,
+    width: null
   }
 };
 export default AlbumDetail;
