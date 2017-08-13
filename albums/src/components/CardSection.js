@@ -19,7 +19,7 @@ const styles = {
     justifyContent: 'flex-start',
     flexDirection: 'row',
     borderColor: '#ddd',
-    positive: 'relative'
+    position: 'relative'
 
   }
 };
