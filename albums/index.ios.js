@@ -7,6 +7,7 @@ import Header from './src/components/header';
 import AlbumList from './src/components/AlbumList';
 
 //create a Component
+console.ignoredYellowBox = ['Remote debugger'];
 const App = () => (
   <View style={{ flex: 1 /*expand the component to fill up the entire area*/}}>
     <Header headerText={'Albums'} />
