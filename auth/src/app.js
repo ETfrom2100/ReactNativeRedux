@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Button } from 'react-native';
 import { Header } from './components/common';
 import LoginForm from './components/LoginForm';
 
@@ -25,11 +25,23 @@ class App extends Component {
        }
     });
   }
+  onButtonPressed() {
+    console.log('clicked');
+  }
+  renderContent() {
+    if (this.state.loggedIn) {
+      return (
+        <Button title="Log Out" onPress={this.onButtonPressed.bind(this)} />
+      );
+    }
+
+    return <LoginForm />;
+  }
   render() {
     return (
       <View>
         <Header headerText="Authentication" />
-        <LoginForm />
+        {this.renderContent()}
       </View>
     );
   }
