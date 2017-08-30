@@ -10,3 +10,8 @@ Firebase
 ```
 npm install --save firebase
 ```
+
+react-native-router-flux
+```
+npm install --save react-native-router-flux
+```
