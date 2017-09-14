@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 const Card = (props) => {
   return (
-    <View style={styles.containerStyle}>
+    <View style={[styles.containerStyle, props.style]}>
       {props.children}
     </View>
   );
@@ -23,6 +23,7 @@ const styles = {
     marginRight: 5,
     marginTop: 10,
     flex: 1
+
 
   }
 };
